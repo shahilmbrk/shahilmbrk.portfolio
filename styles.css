@@ -122,7 +122,7 @@ nav a:hover {
 /* Hero Section */
 #hero {
     height: 100vh;
-    min-height: 700px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,10 +524,16 @@ h1.neon-text {
 }
 
 /* ===============================
-   MOBILE: REMOVE NAV COMPLETELY
+   MOBILE HERO VISIBILITY FIX
    =============================== */
 @media (max-width: 768px) {
     header {
         display: none;
     }
+
+    #hero {
+        padding-top: 2.5rem;   /* forces content into view */
+        padding-bottom: 2rem;
+    }
 }
+
