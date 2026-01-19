@@ -522,3 +522,36 @@ h1.neon-text {
     line-height: 1.7;
     color: #e0e0ff;
 }
+/* ===============================
+   MOBILE HEADER FIX
+   =============================== */
+@media (max-width: 768px) {
+    header {
+        position: sticky;   /* better than fixed on mobile */
+        top: 0;
+        padding: 0.6rem 1rem;
+        backdrop-filter: blur(8px);
+    }
+
+    nav {
+        gap: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 0.6rem;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 768px) {
+    #hero {
+        padding-top: 6rem;   /* creates space for header */
+        min-height: 100vh;
+    }
+}
