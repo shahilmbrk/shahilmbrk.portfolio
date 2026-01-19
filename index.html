@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahil - Synthwave Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="synthwave-bg">
+    <!-- Optional subtle grid canvas or just use CSS background -->
+    <div class="grid-overlay"></div>
+
+    <header>
+    <nav>
+        <div class="logo glitch shake" data-text="Home">Home</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+   <section id="hero" class="hero-synth">
+    <div class="hero-content">
+        <h1 class="neon-text glitch" data-text="Shahil Mubarak">Shahil Mubarak</h1>
+        <p class="neon-sub">Python • Web Development • Machine Learning Enthusiast</p>
+        <p>Final-year B.Tech CSE student crafting clean, data-driven solutions with Flask, Git, MySQL, and ML fundamentals. Building tools like ASD Detection systems and project approval platforms to solve real problems.</p>
+        <div class="hero-highlights">
+            <span>📍 Kozhikode, Kerala</span>
+            <span>📱 +91 9747230720</span>
+        </div>
+        <div class="hero-cta">
+            <a href="#projects" class="neon-btn">Explore Projects</a>
+            <a href="#contact" class="neon-btn secondary">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="animate-section">
+    <h2 class="neon-text glitch" data-text="Background">Background</h2>
+    <div class="about-content">
+        <p>Final-year B.Tech in Computer Science Engineering (2022–2026, CGPA 7.89) at M Dasan Institute of Technology, Calicut. Python Development Intern at Revertech IT Solutions (2024), focusing on clean code, debugging, and workflows.</p>
+        <ul class="about-bullets">
+            <li><strong>Certifications:</strong> Python Workshop (5 Days), HackerRank SQL</li>
+            <li><strong>Interests:</strong> Cloud Computing, AI, Data Analytics, Web Dev</li>
+        </ul>
+        <a href="Shahil_Resume.pdf" download class="neon-btn" style="margin-top: 2rem; display: inline-block;">Full Resume →</a>
+    </div>
+</section>
+
+    <!-- Projects, Skills, Contact sections – same structure as before, just add .neon-card / .neon-skill classes -->
+
+    <section id="projects" class="animate-section">
+    <h2 class="neon-text glitch" data-text="Projects">Projects</h2>
+    <div class="project-grid">
+        <!-- Project 1: Approval & Management System -->
+        <div class="project neon-card">
+            <h3 class="neon-text">Project Approval And Management System</h3>
+            <p>A streamlined web platform for managing project proposals, multi-level approvals, stakeholder reviews, task assignments, and deadline tracking. Built to reduce delays, enhance collaboration, and ensure transparent workflows for teams and organizations.</p>
+            <p><strong>Tech Stack:</strong> HTML/CSS/JS, [add backend if applicable e.g., Node.js/Express, Render deployment]</p>
+            <a href="https://projectdocapproval.onrender.com/" target="_blank" rel="noopener noreferrer" class="neon-btn">Launch Project</a>
+        </div>
+
+        <!-- Project 2: Autism Detection -->
+        <div class="project neon-card">
+            <h3 class="neon-text">Early Stage Autism Spectrum Disorder Detection</h3>
+            <p>An innovative tool leveraging early screening techniques to support the detection of Autism Spectrum Disorder in children. Focused on user-friendly interfaces, data-driven insights, and accessibility for parents, educators, and healthcare professionals.</p>
+            <p><strong>Tech Stack:</strong> [Add when ready, e.g., React, AI/ML integration, etc.]</p>
+            <a href="#" class="neon-btn" onclick="alert('Launch link coming soon — stay tuned!'); return false;">Launch Coming Soon</a>
+        </div>
+
+        <!-- Keep or add more placeholder projects if needed -->
+        <!-- <div class="project neon-card">... other projects ...</div> -->
+    </div>
+</section>
+
+    <section id="skills" class="animate-section">
+    <h2 class="neon-text glitch" data-text="Skills">Skills</h2>
+    <ul class="skills-list">
+        <li class="neon-skill">Python</li>
+        <li class="neon-skill">C</li>
+        <li class="neon-skill">HTML</li>
+        <li class="neon-skill">CSS</li>
+        <li class="neon-skill">Flask</li>
+        <li class="neon-skill">MySQL</li>
+        <li class="neon-skill">Git</li>
+        <li class="neon-skill">Machine Learning Fundamentals</li>
+        <li class="neon-skill">Data Preprocessing</li>
+        <li class="neon-skill">Exploratory Data Analysis</li>
+    </ul>
+</section>
+
+    <section id="contact" class="animate-section">
+    <h2 class="neon-text glitch" data-text="Contact">Contact</h2>
+    <div class="contact-buttons">
+        <a href="mailto:shahilmubarak12@gmail.com" class="contact-btn" data-tooltip="shahilmubarak12@gmail.com">
+            <span class="icon">✉️</span> Email
+        </a>
+        <a href="https://github.com/shahilmbrk" target="_blank" rel="noopener noreferrer" class="contact-btn" data-tooltip="github.com/YOUR_GITHUB_USERNAME">
+            <span class="icon">🐱</span> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/shahilmubarak" target="_blank" rel="noopener noreferrer" class="contact-btn" data-tooltip="linkedin.com/in/YOUR_LINKEDIN_USERNAME">
+            <span class="icon">in</span> LinkedIn
+        </a>
+        <!-- Add phone if you want public (not recommended for privacy) -->
+        <!-- <a href="tel:+919747230720" class="contact-btn" data-tooltip="+91 9747230720">
+            <span class="icon">📞</span> Phone
+        </a> -->
+    </div>
+</section>
+    <footer>
+        <p>© 2026 Shahil — Synthwave Forever</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
