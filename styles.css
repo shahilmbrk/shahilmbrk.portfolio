@@ -562,3 +562,167 @@ h1.neon-text {
 }
 
 
+/* ================================================
+   SYNTHWAVE / RETROWAVE PORTFOLIO THEME (FIXED)
+   Mobile-safe, no scroll bugs
+   ================================================ */
+
+:root {
+    --bg-dark: #0b0015;
+    --purple-deep: #1a0033;
+    --purple-mid: #330066;
+    --magenta: #ff00d4;
+    --hot-pink: #ff3366;
+    --teal: #00f0ff;
+    --orange-sunset: #ff6b6b;
+    --white-glow: #f0f0ff;
+
+    --glow-teal: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    --glow-magenta: 0 0 10px #ff00d4, 0 0 20px #ff00d4;
+    --glow-orange: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--white-glow);
+    font-family: 'VT323', monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        var(--purple-deep),
+        var(--purple-mid),
+        var(--hot-pink),
+        var(--orange-sunset)
+    );
+    z-index: -2;
+    opacity: 0.85;
+}
+
+.grid-overlay {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0,240,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,240,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: perspective(1000px) rotateX(60deg);
+    transform-origin: top;
+    z-index: -1;
+}
+
+/* ================= HEADER (DESKTOP ONLY) ================= */
+
+header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    padding: 1.2rem 3rem;
+    background: rgba(10,0,30,0.65);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--teal);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+/* ================= HERO ================= */
+
+#hero {
+    min-height: 100svh;   /* SAFE mobile viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 1000px;
+    z-index: 2;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 1rem;
+}
+
+.neon-sub {
+    font-size: 1.8rem;
+    color: var(--orange-sunset);
+    margin-bottom: 2rem;
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.4rem;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* ================= MOBILE FIX (THE KEY PART) ================= */
+
+@media (max-width: 768px) {
+
+    /* Remove nav entirely */
+    header {
+        display: none;
+    }
+
+    /* Disable fixed backgrounds (CAUSE OF BUG) */
+    body::before,
+    .grid-overlay {
+        position: absolute;
+        transform: none;
+    }
+
+    /* Hero must be natural height */
+    #hero {
+        min-height: auto;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    /* Ensure scrolling always works */
+    body {
+        overflow-y: auto;
+    }
+}
