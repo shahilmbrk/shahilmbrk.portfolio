@@ -523,17 +523,42 @@ h1.neon-text {
     color: #e0e0ff;
 }
 
-/* ===============================
-   MOBILE HERO VISIBILITY FIX
-   =============================== */
+/* =========================================
+   FINAL MOBILE SCROLL FIX (DO NOT SKIP)
+   ========================================= */
 @media (max-width: 768px) {
+
+    /* Remove header/nav completely */
     header {
         display: none;
     }
 
+    /* Kill 100vh trap */
     #hero {
-        padding-top: 2.5rem;   /* forces content into view */
-        padding-bottom: 2rem;
+        height: auto !important;
+        min-height: unset !important;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    /* Ensure page starts from top */
+    body {
+        overflow-y: auto;
     }
 }
+@media (max-width: 768px) {
+
+    body::before,
+    .grid-overlay {
+        position: absolute;
+        transform: none;
+    }
+}
+@media (max-width: 768px) {
+    .hero-content {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
 
